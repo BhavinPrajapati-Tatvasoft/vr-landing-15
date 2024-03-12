@@ -1,0 +1,95 @@
+@import "variable.scss";
+.growth {
+  overflow: hidden;
+  position: relative;
+  background-color: $white-secondary;
+  padding: 20px 0;
+  & > img {
+    max-width: 100%;
+    height: auto;
+  }
+  & ul {
+    padding-bottom: 12px;
+    & li {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 0;
+        background: url("../../images/right-indicator-icon.svg") center
+          no-repeat;
+        height: 12px;
+        width: 12px;
+      }
+      &:not(:last-child) {
+        padding-bottom: 8px;
+      }
+      & p {
+        padding-bottom: 0px;
+        padding-left: 20px;
+      }
+    }
+  }
+}
+/* Responsive Media Queries --------------------------------------------------------------------------------------------------------*/
+@media (min-width: $breakpoint-sm  + "px") {
+  .growth {
+    padding: 30px 0;
+    & ul {
+      padding-bottom: 20px;
+      & li {
+        &:not(:last-child) {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $breakpoint-md  + "px") {
+  .growth {
+    padding: 50px 0;
+    & ul {
+      padding-bottom: 30px;
+      & li {
+        &:not(:last-child) {
+          padding-bottom: 14px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $breakpoint-lg  + "px") {
+  .growth {
+    padding: 70px 0;
+    & > img {
+      position: absolute;
+      top: 78px;
+      left: calc(50% + 74px);
+      max-width: calc(50%);
+      display: block;
+    }
+  }
+}
+@media (min-width: $breakpoint-xl  + "px") {
+  .growth {
+    padding: 90px 0;
+    & > img {
+      position: absolute;
+      left: calc(50% + 100px);
+    }
+    & ul {
+      padding-bottom: 32px;
+      & li {
+        &:not(:last-child) {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $breakpoint-xxl  + "px") {
+  .growth {
+    padding: 98px 0;
+  }
+}

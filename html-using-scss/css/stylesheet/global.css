@@ -1,0 +1,435 @@
+/* General 
+--------------------------------------------------------------------------------------------------------*/
+* {
+  outline: none !important;
+}
+
+.window-resizing *,
+body:not(.page-loaded) * {
+  transition: none !important;
+}
+
+a {
+  transition: all 0.3s;
+}
+
+html,
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  -ms-overflow-style: scrollbar;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.wrapper {
+  min-height: 100vh;
+  position: relative;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #999;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2em;
+  padding: 0 0 20px;
+}
+
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  display: block;
+}
+
+h1 {
+  font-size: 1.875rem;
+  line-height: 2.1875rem;
+}
+
+h2 {
+  font-size: 1.5625rem;
+  line-height: 1.875rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+}
+
+p {
+  padding: 0 0 20px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+::-webkit-input-placeholder {
+  color: #000;
+}
+
+::-moz-placeholder {
+  color: #000;
+}
+
+:-ms-input-placeholder {
+  color: #000;
+}
+
+:-moz-placeholder {
+  color: #000;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+option:not(:checked) {
+  color: black;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+.logo img {
+  display: block;
+}
+.logo .mobile-logo {
+  height: 34px;
+  width: 34px;
+  display: block;
+}
+.logo .desktop-logo {
+  height: 42px;
+  width: 210px;
+  display: none;
+}
+
+.theme-default .logo .mobile-logo.orange-theme-img, .theme-default .logo .mobile-logo.green-theme-img, .theme-default .logo .mobile-logo.dark-green-theme-img {
+  display: none;
+}
+
+.theme-orange .logo .mobile-logo.default-theme-img, .theme-orange .logo .mobile-logo.green-theme-img, .theme-orange .logo .mobile-logo.dark-green-theme-img {
+  display: none;
+}
+
+.theme-green .logo .mobile-logo.default-theme-img, .theme-green .logo .mobile-logo.orange-theme-img, .theme-green .logo .mobile-logo.green-theme-img {
+  display: none;
+}
+
+.theme-darkGreen .logo .mobile-logo.default-theme-img, .theme-darkGreen .logo .mobile-logo.orange-theme-img, .theme-darkGreen .logo .mobile-logo.dark-green-theme-img {
+  display: none;
+}
+
+.theme-default .blue-img {
+  display: block;
+}
+.theme-default .orange-img,
+.theme-default .green-img,
+.theme-default .dark-green-img {
+  display: none;
+}
+
+.theme-orange .blue-img,
+.theme-orange .green-img,
+.theme-orange .dark-green-img {
+  display: none;
+}
+.theme-orange .orange-img {
+  display: block;
+}
+
+.theme-green .blue-img,
+.theme-green .orange-img,
+.theme-green .dark-green-img {
+  display: none;
+}
+.theme-green .green-img {
+  display: block;
+}
+
+.theme-darkGreen .blue-img,
+.theme-darkGreen .green-img,
+.theme-darkGreen .orange-img {
+  display: none;
+}
+.theme-darkGreen .dark-green-img {
+  display: block;
+}
+
+.btn {
+  box-shadow: none !important;
+  border-radius: 0;
+  white-space: nowrap;
+}
+
+.btn-secondary {
+  border: none;
+  background-color: #fff !important;
+  color: #000 !important;
+  font-weight: 500;
+  padding: 11px 22px;
+  line-height: 23px;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+.btn-secondary::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  background-color: #e6e6e6;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+.btn-secondary:hover::after, .btn-secondary:focus::after {
+  width: 100%;
+  height: 100%;
+}
+.btn-secondary span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-primary {
+  border: none;
+  color: #fff !important;
+  font-weight: 700;
+  padding: 8px 10px;
+  min-width: 124px;
+  line-height: 23px;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+.theme-default .btn-primary {
+  background-color: #ff7629;
+}
+.theme-orange .btn-primary {
+  background-color: #3031a5;
+}
+.theme-green .btn-primary {
+  background-color: #144f43;
+}
+.theme-darkGreen .btn-primary {
+  background-color: #26ab62;
+}
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+.theme-default .btn-primary::after {
+  background-color: #f55a00;
+}
+.theme-orange .btn-primary::after {
+  background-color: #25267e;
+}
+.theme-green .btn-primary::after {
+  background-color: #1e7665;
+}
+.theme-darkGreen .btn-primary::after {
+  background-color: #32d27a;
+}
+.btn-primary:hover::after, .btn-primary:focus::after {
+  width: 100%;
+  height: 100%;
+}
+.btn-primary span {
+  position: relative;
+  z-index: 2;
+}
+
+.fw-black {
+  font-weight: 900 !important;
+}
+
+.themes-listing {
+  background-color: #fff;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  padding: 8px;
+  border-radius: 6px 0 0 6px;
+  box-shadow: 0 0 2px 0px black;
+}
+.themes-listing li:not(:last-child) {
+  padding-bottom: 6px;
+}
+.themes-listing li a {
+  display: block;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  position: relative;
+}
+.themes-listing li a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.4s;
+  opacity: 0;
+}
+.themes-listing li a:focus::after, .themes-listing li a.active::after {
+  opacity: 1;
+}
+.themes-listing li a.default-theme {
+  background-color: #3031a5;
+}
+.themes-listing li a.orange-theme {
+  background-color: #ff7629;
+}
+.themes-listing li a.green-theme {
+  background-color: #26ab62;
+}
+.themes-listing li a.dark-green-theme {
+  background-color: #144f43;
+}
+
+/* Responsive Media Queries --------------------------------------------------------------------------------------------------------*/
+@media (min-width: 576px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+
+  h3 {
+    font-size: 1.5625rem;
+    line-height: 1.875rem;
+  }
+
+  h5 {
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+  }
+
+  .btn-primary {
+    padding: 10px 16px;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    line-height: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    line-height: 2.8125rem;
+  }
+
+  h5 {
+    font-size: 1.5625rem;
+    line-height: 1.875rem;
+  }
+
+  .btn-primary {
+    padding: 12px 25px;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3.125rem;
+    line-height: 3.4375rem;
+  }
+
+  h2 {
+    font-size: 2.8125rem;
+    line-height: 3.125rem;
+  }
+
+  h3 {
+    font-size: 2.1875rem;
+    line-height: 2.5rem;
+  }
+
+  .logo .mobile-logo {
+    display: none;
+  }
+  .logo .desktop-logo {
+    display: block;
+  }
+
+  .theme-default .logo .desktop-logo.orange-theme-img, .theme-default .logo .desktop-logo.green-theme-img, .theme-default .logo .desktop-logo.dark-green-theme-img {
+    display: none;
+  }
+
+  .theme-orange .logo .desktop-logo.default-theme-img, .theme-orange .logo .desktop-logo.green-theme-img, .theme-orange .logo .desktop-logo.dark-green-theme-img {
+    display: none;
+  }
+
+  .theme-green .logo .desktop-logo.default-theme-img, .theme-green .logo .desktop-logo.orange-theme-img, .theme-green .logo .desktop-logo.green-theme-img {
+    display: none;
+  }
+
+  .theme-darkGreen .logo .desktop-logo.default-theme-img, .theme-darkGreen .logo .desktop-logo.orange-theme-img, .theme-darkGreen .logo .desktop-logo.dark-green-theme-img {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 3.4375rem;
+    line-height: 3.75rem;
+  }
+
+  h2 {
+    font-size: 3.4375rem;
+    line-height: 3.75rem;
+  }
+}
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 4.0625rem;
+    line-height: 4.375rem;
+  }
+}
+
+/*# sourceMappingURL=global.css.map */

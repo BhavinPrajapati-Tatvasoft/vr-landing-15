@@ -1,0 +1,90 @@
+.growth {
+  overflow: hidden;
+  position: relative;
+  background-color: #fafafa;
+  padding: 20px 0;
+}
+.growth > img {
+  max-width: 100%;
+  height: auto;
+}
+.growth ul {
+  padding-bottom: 12px;
+}
+.growth ul li {
+  position: relative;
+}
+.growth ul li::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background: url("../../images/right-indicator-icon.svg") center no-repeat;
+  height: 12px;
+  width: 12px;
+}
+.growth ul li:not(:last-child) {
+  padding-bottom: 8px;
+}
+.growth ul li p {
+  padding-bottom: 0px;
+  padding-left: 20px;
+}
+
+/* Responsive Media Queries --------------------------------------------------------------------------------------------------------*/
+@media (min-width: 576px) {
+  .growth {
+    padding: 30px 0;
+  }
+  .growth ul {
+    padding-bottom: 20px;
+  }
+  .growth ul li:not(:last-child) {
+    padding-bottom: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .growth {
+    padding: 50px 0;
+  }
+  .growth ul {
+    padding-bottom: 30px;
+  }
+  .growth ul li:not(:last-child) {
+    padding-bottom: 14px;
+  }
+}
+@media (min-width: 992px) {
+  .growth {
+    padding: 70px 0;
+  }
+  .growth > img {
+    position: absolute;
+    top: 78px;
+    left: calc(50% + 74px);
+    max-width: calc(50%);
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .growth {
+    padding: 90px 0;
+  }
+  .growth > img {
+    position: absolute;
+    left: calc(50% + 100px);
+  }
+  .growth ul {
+    padding-bottom: 32px;
+  }
+  .growth ul li:not(:last-child) {
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .growth {
+    padding: 98px 0;
+  }
+}
+
+/*# sourceMappingURL=growth.css.map */

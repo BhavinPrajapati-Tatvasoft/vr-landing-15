@@ -1,0 +1,189 @@
+.solution {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+.solution .grid {
+  margin: 0 -12px;
+}
+.solution .grid .grid-item {
+  margin-bottom: 12px;
+  width: 100%;
+  padding: 0 12px;
+}
+.solution .grid .grid-item a {
+  display: block;
+  color: #000;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.11);
+  transition: all 0s;
+}
+.solution .grid .grid-item a:hover {
+  color: #fff;
+}
+.theme-default .solution .grid .grid-item a:hover .card {
+  background-color: #3031a5;
+}
+.theme-orange .solution .grid .grid-item a:hover .card {
+  background-color: #ff7629;
+}
+.theme-green .solution .grid .grid-item a:hover .card {
+  background-color: #26ab62;
+}
+.theme-darkGreen .solution .grid .grid-item a:hover .card {
+  background-color: #144f43;
+}
+.theme-default .solution .grid .grid-item a:hover .card::after {
+  background-color: #ff7629;
+}
+.theme-orange .solution .grid .grid-item a:hover .card::after {
+  background-color: #3031a5;
+}
+.theme-green .solution .grid .grid-item a:hover .card::after {
+  background-color: #144f43;
+}
+.theme-darkGreen .solution .grid .grid-item a:hover .card::after {
+  background-color: #26ab62;
+}
+.solution .grid .grid-item a:hover .card span {
+  background-color: #fff;
+}
+.solution .grid .grid-item a:hover .card img {
+  filter: none;
+}
+.solution .grid .grid-item .card {
+  padding: 20px 10px;
+  text-align: center;
+  display: block;
+  border: none;
+  border-radius: 0;
+  transition: all 0.3s;
+}
+.solution .grid .grid-item .card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  width: 100%;
+  transition: all 0.3s;
+}
+.theme-default .solution .grid .grid-item .card::after {
+  background-color: #3031a5;
+}
+.theme-orange .solution .grid .grid-item .card::after {
+  background-color: #ff7629;
+}
+.theme-green .solution .grid .grid-item .card::after {
+  background-color: #26ab62;
+}
+.theme-darkGreen .solution .grid .grid-item .card::after {
+  background-color: #144f43;
+}
+.solution .grid .grid-item .card span {
+  border-radius: 50%;
+  padding: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+.theme-default .solution .grid .grid-item .card span {
+  background-color: #3031a5;
+}
+.theme-orange .solution .grid .grid-item .card span {
+  background-color: #ff7629;
+}
+.theme-green .solution .grid .grid-item .card span {
+  background-color: #26ab62;
+}
+.theme-darkGreen .solution .grid .grid-item .card span {
+  background-color: #144f43;
+}
+.solution .grid .grid-item .card span img {
+  height: 26px;
+  width: 26px;
+  transition: all 0.3s;
+  filter: brightness(0) invert(1);
+}
+.solution .grid .grid-item .card h5 {
+  font-weight: 500;
+}
+
+/* Responsive Media Queries --------------------------------------------------------------------------------------------------------*/
+@media (min-width: 576px) {
+  .solution {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  .solution .grid .grid-item {
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  .solution .grid .grid-item .card span {
+    padding: 18px;
+  }
+  .solution .grid .grid-item .card span img {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .solution {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+  .solution .grid .grid-item {
+    width: 33.33%;
+  }
+  .solution .grid .grid-item .card {
+    padding: 30px 16px;
+  }
+  .solution .grid .grid-item .card span {
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .solution .grid .grid-item .card span img {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .solution {
+    padding-bottom: 40px;
+  }
+  .solution .grid .grid-item {
+    margin-bottom: 30px;
+  }
+  .solution .grid .grid-item .card {
+    padding: 35px 20px 40px;
+  }
+  .solution .grid .grid-item .card span {
+    padding: 30px;
+    margin-bottom: 26px;
+  }
+  .solution .grid .grid-item .card span img {
+    height: 50px;
+    width: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .solution {
+    padding: 90px 0 50px;
+  }
+  .solution .grid .grid-item {
+    margin-bottom: 40px;
+  }
+  .solution .grid .grid-item .card {
+    padding: 50px 32px 44px;
+  }
+  .solution .grid .grid-item .card span {
+    padding: 36px;
+  }
+}
+@media (min-width: 1400px) {
+  .solution {
+    padding: 90px 0 60px;
+  }
+}
+
+/*# sourceMappingURL=solution.css.map */

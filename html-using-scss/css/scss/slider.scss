@@ -1,0 +1,76 @@
+@import "variable.scss";
+.slick-slider {
+  & .slick-dots {
+    padding-top: 20px;
+    display: flex;
+    & li {
+      position: relative;
+      transition: all 0.4s ease-in-out;
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        background-color: $white;
+        height: 2px;
+        width: 0px;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        transition: all 0.4s ease-in-out;
+      }
+      & button {
+        border: 0;
+        background-color: transparent;
+        padding: 0;
+        color: $white;
+        font-weight: fWeight("light");
+        line-height: toRem(20);
+      }
+      &:not(:last-child) {
+        padding-right: 20px;
+        &.slick-active {
+          padding-right: 64px;
+          & button {
+            font-weight: fWeight("bold");
+          }
+          &::after {
+            width: 44px;
+          }
+        }
+      }
+      &.slick-active {
+        & button {
+          font-weight: fWeight("bold");
+        }
+      }
+    }
+  }
+}
+/* Responsive Media Queries --------------------------------------------------------------------------------------------------------*/
+@media (min-width: $breakpoint-sm  + "px") {
+  .slick-slider {
+    .slick-dots {
+      padding-top: 40px;
+    }
+  }
+}
+@media (min-width: $breakpoint-md  + "px") {
+  .slick-slider {
+    .slick-dots {
+      padding-top: 50px;
+    }
+  }
+}
+@media (min-width: $breakpoint-lg  + "px") {
+  .slick-slider {
+    .slick-dots {
+      padding-top: 70px;
+    }
+  }
+}
+@media (min-width: $breakpoint-xl  + "px") {
+  .slick-slider {
+    .slick-dots {
+      padding-top: 112px;
+    }
+  }
+}

@@ -1,0 +1,273 @@
+@import "variable.scss";
+@import "slider.scss";
+@import "theme.scss";
+
+.add-header-bg {
+  & header {
+    @include themify($themes) {
+      background-color: themed("headerBG");
+    }
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+// navbar
+.navbar {
+  padding: 6px 12px;
+  & .offcanvas {
+    width: 270px;
+    @include themify($themes) {
+      background-color: themed("headerBG");
+    }
+  }
+  & .navbar-nav {
+    padding-top: 6px;
+  }
+  & .nav-item {
+    & .nav-link {
+      color: $white;
+      font-weight: fWeight("medium");
+      padding: 8px 16px;
+      position: relative;
+      transition: all 0.4s ease-out;
+      &:hover,
+      &:focus,
+      &.active {
+        @include themify($themes) {
+          color: themed("primaryColor");
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 2px;
+        height: 0;
+        transform: translateY(-50%);
+        transition: all 0.4s ease-out;
+        @include themify($themes) {
+          background-color: themed("primaryColor");
+        }
+      }
+      &:hover::after,
+      &:focus::after,
+      &.active::after {
+        height: 100%;
+      }
+      & span {
+        display: block;
+        white-space: nowrap;
+      }
+    }
+  }
+  & .navbar-toggler {
+    padding: 10px;
+    margin-right: -6px;
+    border: none;
+    border-radius: 50%;
+    &:hover,
+    &:focus {
+      @include themify($themes) {
+        background-color: themed("toggleBgColor");
+      }
+    }
+    & .navbar-toggler-icon {
+      background-image: url("../../images/menu-icon.svg");
+      height: 24px;
+      width: 24px;
+    }
+  }
+}
+
+// Hero Banner
+.hero-banner {
+  overflow: hidden;
+  color: $white;
+  background: url("../../images/top-banner-bg.png") center;
+  background-repeat: repeat;
+  background-blend-mode: color-burn;
+  @include themify($themes) {
+    background-color: themed("headerBG");
+  }
+  padding-top: 66px;
+  position: relative;
+  h1 {
+    padding-bottom: 12px;
+  }
+  & p {
+    padding-bottom: 20px;
+  }
+  .slick-slider {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  img {
+    max-width: calc(100% - 30px);
+    height: auto;
+  }
+}
+/* Responsive Media Queries --------------------------------------------------------------------------------------------------------*/
+@media (min-width: $breakpoint-sm  + "px") {
+  .navbar {
+    & .offcanvas {
+      width: 400px;
+    }
+  }
+  .hero-banner {
+    & img {
+      max-width: calc(100% - 60px);
+    }
+    & .slick-slider {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+    & p {
+      padding-bottom: 30px;
+    }
+  }
+}
+@media (min-width: $breakpoint-md + "px") {
+  .hero-banner {
+    padding-top: 78px;
+  }
+  .navbar {
+    padding: 12px;
+  }
+  .hero-banner .slick-slider {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  .hero-banner img {
+    max-width: 100%;
+  }
+}
+@media (min-width: $breakpoint-lg  + "px") {
+  .navbar {
+    padding: 20px;
+    & .offcanvas {
+      background-color: $transparent !important;
+    }
+    & .navbar-nav {
+      padding-top: 0;
+      align-items: center;
+    }
+    & .nav-item {
+      & .nav-link {
+        padding: 8px 20px;
+        &::after {
+          display: none;
+        }
+        &.active,
+        &:hover,
+        &:focus {
+          & span {
+            &::after {
+              height: 16px;
+            }
+            &::before {
+              height: 16px;
+            }
+          }
+        }
+        & span {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 0;
+            transition: all 0.4s ease-out;
+            @include themify($themes) {
+              background-color: themed("primaryColor");
+            }
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            left: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 0;
+            transition: all 0.4s ease-out;
+            @include themify($themes) {
+              background-color: themed("primaryColor");
+            }
+          }
+        }
+      }
+      & .btn-secondary {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .hero-banner {
+    padding-top: 85px;
+    img {
+      position: absolute;
+      right: 0;
+      top: 132px;
+      left: 50%;
+      max-width: calc(50%);
+    }
+    & .slick-slider {
+      padding-top: 120px;
+      padding-bottom: 100px;
+    }
+  }
+}
+@media (min-width: $breakpoint-xl  + "px") {
+  .navbar {
+    & .navbar-nav {
+      & .nav-link {
+        padding: 8px 24px;
+      }
+      & .btn-secondary {
+        margin-left: 24px;
+      }
+    }
+  }
+  // Hero Banner
+  .hero-banner .slick-slider {
+    padding-top: 170px;
+    padding-bottom: 116px;
+  }
+}
+@media (min-width: $breakpoint-xxl  + "px") {
+  // Navbar
+  .navbar {
+    padding: 20px 100px;
+    & .navbar-nav {
+      & .nav-link {
+        padding: 8px 30px;
+      }
+      & .btn-secondary {
+        margin-left: 30px;
+      }
+    }
+  }
+  // Hero Banner
+  .hero-banner {
+    h1 {
+      padding-bottom: 12px;
+    }
+    & p {
+      font-size: toRem(15);
+      line-height: toRem(24);
+    }
+    .slick-slider {
+      padding-top: 190px;
+      padding-bottom: 114px;
+    }
+  }
+}

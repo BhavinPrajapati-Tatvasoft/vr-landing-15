@@ -1,0 +1,64 @@
+@import "variable.scss";
+$themes: (
+  default: (
+    headerBG: $navy-blue,
+    primaryColor: $primary-orange,
+    toggleBgColor: $navy-blue-variant-2,
+    primaryColorV2: $primary-orange-variant-2,
+    primaryThemeColor: $primary-blue,
+    footerBg: $dark-navy-blue,
+    footerTextColor: $grey-variant-2,
+  ),
+  "orange": (
+    headerBG: $primary-orange,
+    primaryColor: $primary-blue,
+    toggleBgColor: $primary-orange-variant-2,
+    primaryColorV2: $primary-blue-variant-2,
+    primaryThemeColor: $primary-orange,
+    footerBg: $primary-orange,
+    footerTextColor: $white,
+  ),
+  "green": (
+    headerBG: $primary-green,
+    primaryColor: $secondary-green,
+    toggleBgColor: $primary-green-variant-2,
+    primaryColorV2: $secondary-green-variant-2,
+    primaryThemeColor: $primary-green,
+    footerBg: $primary-green,
+    footerTextColor: $white,
+  ),
+  "darkGreen": (
+    headerBG: $secondary-green,
+    primaryColor: $primary-green,
+    toggleBgColor: $secondary-green-variant-2,
+    primaryColorV2: $primary-green-variant-2,
+    primaryThemeColor: $secondary-green,
+    footerBg: $secondary-green,
+    footerTextColor: $white,
+  ),
+);
+
+// Themify for themes
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}

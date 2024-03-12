@@ -1,0 +1,20 @@
+/* Import All css here */
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap";
+@import "bootstrap.min.css";
+@import "reset.css";
+@import "animations.css";
+@import "slick.css";
+@import "stylesheet/global.css";
+@import "stylesheet/variable.css";
+@import "stylesheet/header.css";
+@import "stylesheet/industry.css";
+@import "stylesheet/growth.css";
+@import "stylesheet/solution.css";
+@import "stylesheet/brand-logo.css";
+@import "stylesheet/footer.css";
+
+/* Body Hidden till Load the page */
+body:not(.page-loaded) {
+  opacity: 0;
+  overflow: hidden;
+}

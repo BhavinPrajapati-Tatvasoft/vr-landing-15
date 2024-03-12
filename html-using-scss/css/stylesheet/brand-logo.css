@@ -1,0 +1,48 @@
+.brand-logo-wrapper {
+  padding: 10px 0;
+}
+.brand-logo-wrapper a {
+  display: block;
+  padding: 10px 8px;
+}
+.brand-logo-wrapper a img {
+  transition: all 0.4s ease-in-out;
+  transform: scale(1);
+  display: inline-block;
+  vertical-align: middle;
+}
+.brand-logo-wrapper a:hover img {
+  transform: scale(1.2);
+}
+
+/* Responsive Media Queries --------------------------------------------------------------------------------------------------------*/
+@media (min-width: 576px) {
+  .brand-logo-wrapper {
+    padding: 20px 0;
+  }
+}
+@media (min-width: 768px) {
+  .brand-logo-wrapper {
+    padding: 30px 0;
+  }
+  .brand-logo-wrapper a {
+    padding: 18px 8px;
+  }
+}
+@media (min-width: 992px) {
+  .brand-logo-wrapper {
+    padding: 40px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .brand-logo-wrapper {
+    padding: 60px 0;
+  }
+}
+@media (min-width: 1400px) {
+  .brand-logo-wrapper {
+    padding: 80px 0;
+  }
+}
+
+/*# sourceMappingURL=brand-logo.css.map */
